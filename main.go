@@ -50,6 +50,8 @@ func main() {
         // CLIENT TLS
         ///////////////////////////////////////////////////
 
+        // Création d'un client HTTP personnalisé
+
         client := &http.Client{
                 Transport: &http.Transport{
                         TLSClientConfig: &tls.Config{
@@ -57,6 +59,14 @@ func main() {
                         },
                 },
         }
+
+        //Mode normal :
+
+        //Go --> Vérifie le certificat --> OK --> connexion
+
+        // Mode InsecureSkipVerify :
+
+        // Go --> Ignore le certificat --> connexion
 
         ///////////////////////////////////////////////////
         // APPEL API
@@ -71,6 +81,13 @@ func main() {
 
         defer resp.Body.Close()
 
+        //  Go :
+
+        // ouvre une connexion HTTPS ;
+// envoie la requête GET ;
+//attend la réponse du serveur ;
+//récupère le contenu JSON.
+        
         ///////////////////////////////////////////////////
         // LECTURE REPONSE
         ///////////////////////////////////////////////////
