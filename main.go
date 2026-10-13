@@ -1,11 +1,11 @@
 package main
 
 import (
-        "crypto/tls"
-        "encoding/json"
-        "fmt"
-        "io"
-        "net/http"
+        "crypto/tls"  //Permet de gérer le protocole HTTPS (TLS)
+        "encoding/json"  //Permet de convertir JSON → Structure Go
+        "fmt"  //Package d'affichage
+        "io"  //Permet de lire un flux de données
+        "net/http" //Permet : appels API, serveur web, requêtes HTTP
 )
 
 ///////////////////////////////////////////////////////
