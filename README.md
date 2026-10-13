@@ -1,22 +1,22 @@
-Go STAR Bus 83 Live
+# Go STAR Bus 83 Live
 
-Application Go permettant de consulter en temps réel les prochains passages de la ligne de bus 83 du réseau STAR (Rennes), en utilisant les API Open Data de Rennes Métropole.
+A Go application that consumes STAR Rennes Open Data APIs to display real-time Bus 83 arrivals, stops, destinations, and live transit information.
 
-Description : 
+## Description
 
-Ce projet interroge l'API temps réel du réseau STAR afin de récupérer les horaires de passage du bus 83 aux différents arrêts du réseau.
+This project connects to the STAR Rennes Open Data API and retrieves real-time information about Bus 83 operations across the Rennes metropolitan area.
 
-Les données sont récupérées au format JSON, puis converties en structures Go pour être traitées et affichées dans le terminal.
+The application fetches live transit data in JSON format, processes the response using Go structures, and displays upcoming Bus 83 arrivals, stop names, destinations, and real-time schedule information directly in the terminal.
 
-Fonctionnalités : 
-- Connexion à l'API Open Data STAR : 
-/api/explore/v2.1/catalog/datasets/prochains-passages-des-lignes-de-bus-du-reseau-star-en-temps-reel/records?limit=20&refine=nomcourtligne%3A%2283%22
-- Récupération des données en temps réel
-- Désérialisation du JSON avec encoding/json
-- Filtrage des passages de la ligne 83
-- Affichage des arrêts desservis
-- Affichage des destinations
-- Affichage des heures d'arrivée prévues
-- Comptage du nombre de passages trouvés
-Gestion des erreurs HTTP et JSON
-Utilisation d'un client HTTPS personnalisé pour ignorer les erreurs TLS dans un environnement de test
+## Features
+
+- Retrieve live data from the STAR Rennes Open Data API
+- Display Bus 83 real-time arrivals
+- Show stop names
+- Show bus destinations
+- Display expected arrival times
+- Filter data to keep only Bus 83 records
+- Count the number of Bus 83 passages found
+- Parse and process JSON responses
+- Handle HTTP and JSON errors
+- Use a custom HTTPS client for environments requiring TLS certificate bypass during testing
