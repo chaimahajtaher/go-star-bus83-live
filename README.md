@@ -9,7 +9,8 @@ Ce projet interroge l'API temps réel du réseau STAR afin de récupérer les ho
 Les données sont récupérées au format JSON, puis converties en structures Go pour être traitées et affichées dans le terminal.
 
 Fonctionnalités : 
-- Connexion à l'API Open Data STAR
+- Connexion à l'API Open Data STAR : 
+/api/explore/v2.1/catalog/datasets/prochains-passages-des-lignes-de-bus-du-reseau-star-en-temps-reel/records?limit=20&refine=nomcourtligne%3A%2283%22
 - Récupération des données en temps réel
 - Désérialisation du JSON avec encoding/json
 - Filtrage des passages de la ligne 83
